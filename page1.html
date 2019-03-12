@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Excise Taxes</title>
+    <link rel="stylesheet" type="text/css" href="page1.css">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.min.css">
+  </head>
+
+  <body>
+  	<div class="pseudo">
+        <div class="sharp"></div>
+        <div class="blurredVisible"></div>
+  	</div>
+  	<img class="titleBtn" id="minimize"></img>
+  	<img class="titleBtn" id="maximize"></img>
+  	<img class="titleBtn" id="close"></img>
+  	<div data-simplebar data-simplebar-autohide="false" class="appContainer">
+	  	<div class="appWrapper">
+	  		<div class="topWrapper">
+	  			<div id="saveWrapper">
+	  				<div class="quote-container">
+						<i class="pin"></i>
+						<blockquote class="note yellow">
+							<h3>Instructions</h3>
+							<p>- Fill all the boxes for the excise tax report of the chosen month.</p>
+							<p>- For the Production Report, the relevant Cell in the source (Excel report) is displayed in the empty boxes.</p>
+							<p>- Taxes rates are to be updated annually. A value change in these boxes generates an annual adjustment.</p>
+							<p>- Upon completing data entry for chosen month, results appear in the tab "Excise Taxes". Earlier months are available.</p>
+						</blockquote>
+					</div>
+	  				<img class="savePseudoIcon"/>
+	  			</div>
+		  		<div id="monthWrapper">
+		  			<div class="lastMonthBtn"></div>
+		  			<div class="lastMonthPseudoBtn"></div>
+		  			<input disabled type="month" class="monthSelector" min="2017-01" max="2099-12" value="2018-01">
+		  			<div class="nextMonthBtn"></div>
+		  			<div class="nextMonthPseudoBtn"></div>
+		  		</div>
+		  		<div id="buttonWrapper">
+		  			<button class="activeBtn" id="tabBtn1">Data</button>
+		  			<button class="inactiveBtn" id="tabBtn2">Excise Taxes</button>
+		  			<button class="inactiveBtn" id="tabBtn3">Electr. certificate</button>
+		  		</div>
+	  		</div>
+	  		<div class="tabWrapper" id="tabWrapper1">
+		  		<div class="partWrapper" id="prodWrapper">
+				    <h2 class="mainHeader">Production Report</h2>
+				    <p class="beneathHeader">To be updated monthly</p>
+				    <div class="inputWrapperR">
+						<div class="InputLine">
+							<div class="upperPart">		
+								<p class="p1">Usage KVV PWP</p>	
+							</div>
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="f_kvv_ptp" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G11</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">Tons </p>
+								</div>
+							</div>
+						</div>			
+						<div class="InputLine">
+							<div class="upperPart">		
+								<p class="p1">Usage KVV Forest Chips</p>	
+							</div>		
+							<div class="lowerPart">
+								<div class="lowerPartL">	
+									<input type="text" id="f_kvv_sflis" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G12</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">Tons </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">
+							<div class="upperPart">		
+								<p class="p1">Usage KVV Recycling Chips</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="f_kvv_aflis" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G13</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">Tons </p>
+								</div>	
+							</div>		
+						</div>		
+						<div class="InputLine">
+							<div class="upperPart">		
+								<p class="p1">Usage KVV Oil</p>	
+							</div>
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="f_kvv_eo1" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G14</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">m3 </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">
+							<div class="upperPart">
+								<p class="p1">Usage HVC Recycling Chips</p>	
+							</div>
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="f_hvc_aflis" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G21</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">Tons </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">
+							<div class="upperPart">		
+								<p class="p1">Usage HVC Forest Chips</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="f_hvc_sflis" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G22</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">Tons </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">	
+							<div class="upperPart">		
+								<p class="p1">Usage HVC Oil</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="f_hvc_eo1" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G26</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">m3 </p>
+								</div>	
+							</div>		
+						</div>					
+					</div>	
+					<div class="inputWrapperC">
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Usage HVC Natural Gas</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="f_hvc_ngas" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G28</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">1000m3 </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">	
+							<div class="upperPart">		
+								<p class="p1">Usage HVC Biogas</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="f_hvc_bgas" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G29</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">1000m3 </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">
+							<div class="upperPart">		
+								<p class="p1">Usage Lasarettet Oil</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="f_lsret_eo1" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G31</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">m3 </p>
+								</div>	
+							</div>		
+						</div>
+						<div class="InputLine">
+							<div class="upperPart">		
+								<p class="p1">Usage V. Fäladen Oil</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="f_vfala_eo1" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G33</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">m3 </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">
+							<div class="upperPart">		
+								<p class="p1">Usage Leran Natural Gas</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="f_brons_ngas" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G35</label>
+								</div>
+								<div class="lowerPartR">	
+									<p class="p2">1000m3 </p>
+								</div>
+							</div>
+						</div>
+						<div class="InputLine">
+							<div class="upperPart">		
+								<p class="p1">Usage Bulten Natural Gas</p>	
+							</div>
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="f_bult_ngas" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G39</label>
+								</div>
+								<div class="lowerPartR">	
+									<p class="p2">1000m3 </p>
+								</div>
+							</div>
+						</div>		
+						<div class="InputLine">
+							<div class="upperPart">		
+								<p class="p1">Usage Seden Wood Chips</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="f_atorp_flis" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G41</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">Tons </p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="inputWrapperL">
+						<div class="InputLine">
+							<div class="upperPart">
+								<p class="p1">Usage Seden Oil</p>
+							</div>
+							<div class="lowerPart">
+								<div class="lowerPartL">
+									<input type="text" id="f_atorp_eo1" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell G42</label>
+								</div>
+								<div class="lowerPartR">
+									<p class="p2">m3 </p>
+								</div>
+							</div>
+						</div>
+						<div class="InputLine">	
+							<div class="upperPart">
+								<p class="p1">Prod. KVV To Condensor</p>
+							</div>
+							<div class="lowerPart">
+								<div class="lowerPartL">
+									<input type="text" id="p_kvv_kds" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell P16</label>
+								</div>
+								<div class="lowerPartR">
+									<p class="p2">MWh </p>
+								</div>
+							</div>
+						</div>
+						<div class="InputLine">
+							<div class="upperPart">
+								<p class="p1">Prod. KVV Electr.</p>
+							</div>
+							<div class="lowerPart">
+								<div class="lowerPartL">
+									<input type="text" id="p_kvv_el" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell P18</label>
+								</div>
+								<div class="lowerPartR">
+									<p class="p2">MWh </p>
+								</div>
+							</div>
+						</div>
+						<div class="InputLine">
+							<div class="upperPart">
+								<p class="p1">Prod. KVV Heating</p>
+							</div>
+							<div class="lowerPart">
+								<div class="lowerPartL">
+									<input type="text" id="p_kvv_varme" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell P19</label>
+								</div>
+								<div class="lowerPartR">
+									<p class="p2">MWh </p>
+								</div>
+							</div>		
+						</div>	
+						<div class="InputLine">
+							<div class="upperPart">
+								<p class="p1">Prod. HVC Solid Fuel</p>
+							</div>
+							<div class="lowerPart">
+								<div class="lowerPartL">
+									<input type="text" id="p_hvc_fbransle" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell P27</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">MWh </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Prod. HVC Natural Gas</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="p_hvc_ngas" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell P28</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">MWh </p>
+								</div>
+							</div>
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">
+								<p class="p1">Prod. HVC Biogas</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="p_hvc_bgas" placeholder=" " value="">
+									<label class="inputLabel">Prod. report: Cell P29</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">MWh </p>
+								</div>	
+							</div>		
+						</div>	
+					</div>
+				</div>
+				<div class="partWrapper" id="anvWrapper">
+				    <h2 class="mainHeader">Electricity Usage</h2>
+				    <p class="beneathHeader">To be updated monthly</p>
+				    <div class="inputWrapperR">
+				    	<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Seden</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_atorp" placeholder=" " value="">
+									<label class="inputLabel">Invoice EON (plt.  nr -207)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">kWh </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Brohusen</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_brohus" placeholder=" " value="">
+									<label class="inputLabel">Propps (plt.  nr -34)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">kWh </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">
+							<div class="upperPart">		
+								<p class="p1">Leran</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_brons" placeholder=" " value="">
+									<label class="inputLabel">Propps (plt.  nr -220)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">kWh </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Bulten</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_bult" placeholder=" " value="">
+									<label class="inputLabel">Propps (plt.  nr -123)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">m3 </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Esperanza</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_esprz" placeholder=" " value="">
+									<label class="inputLabel">Propps (plt.  nr -033)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">MWh </p>
+								</div>	
+							</div>		
+						</div>
+					</div>
+					<div class="inputWrapperC">
+							<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Häljarp</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_hjarp" placeholder=" " value="">
+									<label class="inputLabel">Propps (plt.  nr -902)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">kWh </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Landsverk</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_lverk" placeholder=" " value="">
+									<label class="inputLabel">Propps (plt.  nr -353)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">kWh </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Släggan</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_slagg" placeholder=" " value="">
+									<label class="inputLabel">Propps (plt.  nr -860)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">kWh </p>
+								</div>	
+							</div>		
+						</div>
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Varvsudden</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_varv" placeholder=" " value="">
+									<label class="inputLabel">Propps (plt.  nr -779)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">kWh </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">V. Fäladen</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_vfala" placeholder=" " value="">
+									<label class="inputLabel">Propps (plt.  nr -008)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">kWh </p>
+								</div>	
+							</div>		
+						</div>
+					</div>
+					<div class="inputWrapperL">
+							<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Hot Water Storage Tank</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_ackt" placeholder=" " value="">
+									<label class="inputLabel">Manual (Prod. dept)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">kWh </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Electric Steam Boiler</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_elp" placeholder=" " value="">
+									<label class="inputLabel">Manual (Prod. dept)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">kWh </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Heating Pump</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_fjvp" placeholder=" " value="">
+									<label class="inputLabel">Manual (Prod. dept)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">kWh </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Boiler Station</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_hvc" placeholder=" " value="">
+									<label class="inputLabel">Manual (Prod. dept)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">kWh </p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Flue-Gas Condensation</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="a_rgk" placeholder=" " value="">
+									<label class="inputLabel">Manual (Prod. dept)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">kWh </p>
+								</div>	
+							</div>		
+						</div>
+					</div>
+				</div>
+				<div class="partWrapper" id="taxWrapper">
+					<h2 class="mainHeader">Tax Rates</h2>
+				    <p class="beneathHeader">To be updated annually</p>
+				    <div class="inputWrapperR">
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Energy Tax PWP</p>	
+							</div>
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_e_ptp" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK/Ton</p>
+								</div>
+							</div>	
+						</div>		
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Energy Tax Oil</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_e_eo1" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK/m3</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Energy Tax Biogas</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_e_bgas" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">
+									<p class="p2">SEK/Nm3</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Energy Tax Natural Gas</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_e_ngas" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2_condensed">SEK/1000Nm3</p>
+								</div>	
+							</div>		
+						</div>
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Energy Tax Pellet</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_e_pelts" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK/m3</p>
+								</div>	
+							</div>		
+						</div>
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Energy Tax Diesel</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_e_disl" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK/m3</p>
+								</div>	
+							</div>		
+						</div>
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Energy Tax Electr.</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_e_el" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK/MWh</p>
+								</div>	
+							</div>		
+						</div>	
+					</div>
+					<div class="inputWrapperC">
+							<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Energy Tax Chips</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_e_flis" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK/Ton</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">CO2 Tax PWP</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_c_ptp" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK/Ton</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">CO2 Tax Oil</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_c_eo1" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK/m3</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">CO2 Tax Biogas</p>	
+							</div>
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_c_bgas" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK/Nm3</p>
+								</div>
+							</div>
+						</div>	
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">CO2 Tax Natural Gas</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_c_ngas" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2_condensed">SEK/1000Nm3</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">CO2 Tax Pellet</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_c_pelts" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK/m3</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">CO2 Tax Diesel</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_c_disl" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK/m3</p>
+								</div>	
+							</div>		
+						</div>
+					</div>
+					<div class="inputWrapperL">
+							<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">CO2 Tax Electr.</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_c_el" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK/MWh</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">CO2 Tax Chips</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_c_flis" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK/Ton</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Sulfur Tax</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_s_svavel" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK/m3</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Energy Tax KVV</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_e_kvv" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">%</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">CO2 Tax KVV</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_c_kvv" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">%</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Energy Discount Heating</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_e_av" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">%</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">CO2 Discount Heating</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="sk_c_av" placeholder=" " value="">
+									<label class="inputLabel">Tax Agency</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">%</p>
+								</div>	
+							</div>		
+						</div>
+					</div>
+				</div>
+				<div class="partWrapper" id="modWrapper">
+					<h2 class="mainHeader">Modity</h2>
+				    <p class="beneathHeader">To be updated monthly</p>
+					<div class="inputWrapperR" id="dualInputWrapper">
+							<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Modity Sold</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input type="text" id="m_salt" placeholder=" " value="">
+									<label class="inputLabel">Modity-mail (Prod.)</label>
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">MWh</p>
+								</div>	
+							</div>		
+						</div>
+					</div>
+					<div class="inputWrapperL" id="dualInputWrapper">	
+						<div class="InputLine">
+							<div class="upperPart">
+								<p class="p1">Modity Bought</p>
+							</div>
+							<div class="lowerPart">
+								<div class="lowerPartL">
+									<input type="text" id="m_kopt" placeholder=" " value="">
+									<label class="inputLabel">Modity-mail (Usage)</label>
+								</div>
+								<div class="lowerPartR">
+									<p class="p2">MWh</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	  		</div>
+	  		<div class="tabWrapper" id="tabWrapper2">
+		  		<div class="partWrapper" id="deklWrapper1">
+					<div class="inputWrapperL">
+						<h2 class="subHeader">Form 718</h2>
+						<p class="beneathSubHeader">Sulfur</p>
+						<div class="InputLine">
+							<div class="upperPart">
+								<p class="p1">Box 1</p>
+							</div>
+							<div class="lowerPart">
+								<div class="lowerPartL">
+									<input disabled type="text" class="none" id="R_718_1" value="">
+								</div>
+								<div class="lowerPartR">
+									<p class="p2">m3</p>
+								</div>
+							</div>
+						</div>
+						<div class="InputLine">
+							<div class="upperPart">		
+								<p class="p1">Box 10</p>
+							</div>
+							<div class="lowerPart">
+								<div class="lowerPartL">
+									<input disabled type="text" class="none" id="R_718_10" value="">
+								</div>
+								<div class="lowerPartR">
+									<p class="p2">SEK</p>
+								</div>
+							</div>
+						</div>
+						<div class="InputLine">	
+							<div class="upperPart">
+								<p class="p1">Box 11</p>
+							</div>
+							<div class="lowerPart">
+								<div class="lowerPartL">
+									<input disabled type="text" class="sum" id="R_718_11" value="">
+								</div>
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>
+							</div>
+						</div>
+						<div class="InputLine">
+							<div class="upperPart">
+								<p class="p1">Box 22</p>
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="sum" id="R_718_22" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>
+					</div>
+					<div class="inputWrapperC">
+						<h2 class="subHeader">Totals</h2>
+						<p class="beneathSubHeader">Sums of forms</p>
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Fuel</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="none" id="R_tot_bransle" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Electr.</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="plus" id="R_tot_el" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Sulfur</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="plus" id="R_tot_svavel" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Total</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="sum" id="R_tot_total" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>	
+					</div>
+					<div class="inputWrapperR">
+						<h2 class="subHeader">Form 701</h2>
+						<p class="beneathSubHeader">Electricity</p>
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 2</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="none" id="R_701_2" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">MWh</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 3</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="none" id="R_701_3" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 21</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="none" id="R_701_21" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>
+					</div>
+		  		</div>
+		  		<div class="partWrapper" id="deklWrapper2">
+		  			<h2 class="mainHeader">Form 712</h2>
+		  			<p class="beneathHeader">Oil</p>
+					<div class="inputWrapperL">
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 31</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="none" id="R_712_31" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">m3</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 40</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="none" id="R_712_40" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">m3</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 41</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="none" id="R_712_41" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">m3</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 43</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="none" id="R_712_43" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">m3</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 97</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="plus" id="R_712_97" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 98</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="sum" id="R_712_98" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>
+					</div>
+					<div class="inputWrapperC">
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 108</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="minus" id="R_712_108" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 109</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="minus" id="R_712_109" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 112</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="sum" id="R_712_112" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 113</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="plus" id="R_712_113" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 114</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="sum" id="R_712_114" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>		
+					</div>
+					<div class="inputWrapperR">
+						<div class="InputLine">		
+							<div class="upperPart">		
+								<p class="p1">Box 124</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="minus" id="R_712_124" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 125</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="minus" id="R_712_125" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 127</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="minus" id="R_712_127" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 129</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="sum" id="R_712_129" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">
+							<div class="upperPart">
+								<p class="p1">Box 130</p>	
+							</div>
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="sum" id="R_712_130" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>
+					</div>
+		  		</div>
+		  		<div class="partWrapper" id="deklWrapper3">
+		  			<h2 class="mainHeader">Form 713</h2>
+		  			<p class="beneathHeader">Natural Gas</p>
+					<div class="inputWrapperL">
+						<div class="InputLine">
+							<div class="upperPart">
+								<p class="p1">Box 12</p>
+							</div>
+							<div class="lowerPart">
+								<div class="lowerPartL">
+									<input disabled type="text" class="none" id="R_713_12" value="">
+								</div>
+								<div class="lowerPartR">
+									<p class="p2_condensed">1000Nm3</p>
+								</div>
+							</div>	
+						</div>		
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 22</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="none" id="R_713_22" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2_condensed">1000Nm3</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 53</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="plus" id="R_713_53" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 55</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="sum" id="R_713_55" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>
+					</div>
+					<div class="inputWrapperC">
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 63</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="minus" id="R_713_63" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 68</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="sum" id="R_713_68" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 70</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="plus" id="R_713_70" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 72</p>	
+							</div>
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="sum" id="R_713_72" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>
+					</div>
+					<div class="inputWrapperR">
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 82</p>	
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="minus" id="R_713_82" value="">
+								</div>	
+								<div class="lowerPartR">	
+									<p class="p2">SEK</p>
+								</div>	
+							</div>		
+						</div>			
+						<div class="InputLine">			
+							<div class="upperPart">		
+								<p class="p1">Box 86</p>
+							</div>		
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="sum" id="R_713_86" value="">
+								</div>
+								<div class="lowerPartR">
+									<p class="p2">SEK</p>
+								</div>
+							</div>
+						</div>
+						<div class="InputLine">
+							<div class="upperPart">
+								<p class="p1">Box 87</p>
+							</div>
+							<div class="lowerPart">		
+								<div class="lowerPartL">	
+									<input disabled type="text" class="sum" id="R_713_87" value="">
+								</div>
+								<div class="lowerPartR">
+									<p class="p2">SEK</p>
+								</div>
+							</div>
+						</div>
+					</div>
+		  		</div>
+		  	</div>
+	  		<div class="tabWrapper" id="tabWrapper3">
+	  			<h2 class="mainHeader" id="elcertHeader">Electric Certificate Calculation</h2>
+				<p class="beneathHeader"></p>
+	  			<table class="elcertTable">
+	  				<tr>
+	  					<th></th>
+	  					<th></th>
+	  					<th>Jan</th>
+	  					<th>Feb</th>
+	  					<th>Mar</th>
+	  					<th>Apr</th>
+	  					<th>Maj</th>
+	  					<th>Jun</th>
+	  					<th>Jul</th>
+	  					<th>Aug</th>
+	  					<th>Sep</th>
+	  					<th>Oct</th>
+	  					<th>Nov</th>
+	  					<th>Dec</th>
+	  					<th id="th_tot">Totals</th>
+	  				</tr>
+	  				<tr>
+	  					<td>Used self-produced electricity</td>
+	  					<td>MWh</td>
+	  					<td id="td_1_1"></td>
+	  					<td id="td_1_2"></td>
+	  					<td id="td_1_3"></td>
+	  					<td id="td_1_4"></td>
+	  					<td id="td_1_5"></td>
+	  					<td id="td_1_6"></td>
+	  					<td id="td_1_7"></td>
+	  					<td id="td_1_8"></td>
+	  					<td id="td_1_9"></td>
+	  					<td id="td_1_10"></td>
+	  					<td id="td_1_11"></td>
+	  					<td id="td_1_12"></td>
+	  					<td id="td_1_13"></td>
+	  				</tr>
+	  				<tr>
+	  					<td>Allocated for electricity</td>
+	  					<td>%</td>
+	  					<td id="td_2_1"></td>
+	  					<td id="td_2_2"></td>
+	  					<td id="td_2_3"></td>
+	  					<td id="td_2_4"></td>
+	  					<td id="td_2_5"></td>
+	  					<td id="td_2_6"></td>
+	  					<td id="td_2_7"></td>
+	  					<td id="td_2_8"></td>
+	  					<td id="td_2_9"></td>
+	  					<td id="td_2_10"></td>
+	  					<td id="td_2_11"></td>
+	  					<td id="td_2_12"></td>
+	  					<td id="td_2_13"></td>
+	  				</tr>
+	  				<tr>
+	  					<td>Allocated for heating</td>
+	  					<td>%</td>
+	  					<td id="td_3_1"></td>
+	  					<td id="td_3_2"></td>
+	  					<td id="td_3_3"></td>
+	  					<td id="td_3_4"></td>
+	  					<td id="td_3_5"></td>
+	  					<td id="td_3_6"></td>
+	  					<td id="td_3_7"></td>
+	  					<td id="td_3_8"></td>
+	  					<td id="td_3_9"></td>
+	  					<td id="td_3_10"></td>
+	  					<td id="td_3_11"></td>
+	  					<td id="td_3_12"></td>
+	  					<td id="td_3_13"></td>
+	  				</tr>
+	  				<tr>
+	  					<td>Discount (actual using force)</td>
+	  					<td>MWh</td>
+	  					<td id="td_4_1"></td>
+	  					<td id="td_4_2"></td>
+	  					<td id="td_4_3"></td>
+	  					<td id="td_4_4"></td>
+	  					<td id="td_4_5"></td>
+	  					<td id="td_4_6"></td>
+	  					<td id="td_4_7"></td>
+	  					<td id="td_4_8"></td>
+	  					<td id="td_4_9"></td>
+	  					<td id="td_4_10"></td>
+	  					<td id="td_4_11"></td>
+	  					<td id="td_4_12"></td>
+	  					<td id="td_4_13"></td>
+	  				</tr>
+	  				<tr>
+	  					<td>Electricity usage to declare</td>
+	  					<td>MWh</td>
+	  					<td id="td_5_1"></td>
+	  					<td id="td_5_2"></td>
+	  					<td id="td_5_3"></td>
+	  					<td id="td_5_4"></td>
+	  					<td id="td_5_5"></td>
+	  					<td id="td_5_6"></td>
+	  					<td id="td_5_7"></td>
+	  					<td id="td_5_8"></td>
+	  					<td id="td_5_9"></td>
+	  					<td id="td_5_10"></td>
+	  					<td id="td_5_11"></td>
+	  					<td id="td_5_12"></td>
+	  					<td id="td_5_13"></td>
+	  				</tr>
+	  			</table>
+	  		</div>
+	  	</div>
+	 </div>
+    <script>
+      	require('./renderer.js')
+    </script>
+	<script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
+  </body>
+
+</html>

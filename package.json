@@ -1,0 +1,28 @@
+{
+  "name": "exciseTaxApplication",
+  "productName": "Excise Tax Application",
+  "version": "1.0.0",
+  "description": "An application used to calculate monthly excise taxes",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^3.0.13",
+    "electron-packager": "^13.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "simplebar": "^3.1.1",
+    "sweetalert2": "^7.33.1"
+  }
+}
