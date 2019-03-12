@@ -15,7 +15,7 @@ var m = today.getMonth()+1;
 var yyyy = today.getFullYear();
 var mm = (m < 10) ? '0'+ m : m.toString()
 //today = yyyy + "-" + mm;
-today = "2019-01"
+today = "2019-02"
 var activeMonth = today
 
 //Array to store all months in data
@@ -374,11 +374,11 @@ function update_Month_Btns() {
 	activeMonth = document.querySelector('.monthSelector').value
 	document.querySelector('div[class$="MonthBtn"]').style.display = "inline-block"
 	document.querySelector('div[class$="PseudoBtn"]').style.display = "none"
-	if (monthList[0] === activeMonth) {
+	if (monthList[0] == activeMonth) {
 		document.querySelector('.lastMonthBtn').style.display = "none"
 		document.querySelector('.lastMonthPseudoBtn').style.display = "inline-block"
 	}
-	if (monthList[monthList.length-1] === activeMonth) {
+	if (monthList[monthList.length-1] == activeMonth) {
 		document.querySelector('.nextMonthBtn').style.display = "none"
 		document.querySelector('.nextMonthPseudoBtn').style.display = "inline-block"
 	} 
